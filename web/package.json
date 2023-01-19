@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.2",
     "autoprefixer": "^10.4.13",
     "dayjs": "^1.11.7",
     "phosphor-react": "^1.4.1",
