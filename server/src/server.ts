@@ -12,9 +12,5 @@ HTTP Methods: Get, Post, Patch, Put and Delete
 */
 
 app
-  .listen({
-    port: 3333,
-  })
-  .then(() => {
-    console.log("HTTP Server running!");
-  });
+  .listen({ port: 3333, host: "0.0.0.0" })
+  .then(() => console.log("Server running!"));
