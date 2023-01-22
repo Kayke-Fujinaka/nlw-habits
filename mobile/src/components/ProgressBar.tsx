@@ -13,11 +13,9 @@ interface ProgressBarProps {
 export function ProgressBar({ progress = 0 }: ProgressBarProps) {
   const sharedProgress = useSharedValue(progress);
 
-  const style = useAnimatedStyle(() => {
-    return {
-      width: `${sharedProgress.value}%`,
-    };
-  });
+  const style = useAnimatedStyle(() => ({
+    width: `${sharedProgress.value}%`,
+  }));
 
   useEffect(() => {
     sharedProgress.value = withTiming(progress);
