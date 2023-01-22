@@ -41,16 +41,16 @@ export function HabitDay({
         ["bg-violet-900 border-violet-700"]:
           amountAccomplishedPercentage > 0 && amountAccomplishedPercentage < 20,
         ["bg-violet-800 border-violet-600"]:
-          amountAccomplishedPercentage > 20 &&
+          amountAccomplishedPercentage >= 20 &&
           amountAccomplishedPercentage < 40,
         ["bg-violet-700 border-violet-500"]:
-          amountAccomplishedPercentage > 40 &&
+          amountAccomplishedPercentage >= 40 &&
           amountAccomplishedPercentage < 60,
         ["bg-violet-600 border-violet-500"]:
-          amountAccomplishedPercentage > 60 &&
+          amountAccomplishedPercentage >= 60 &&
           amountAccomplishedPercentage < 80,
-        ["bg-violet-500 border-violet-500"]: amountAccomplishedPercentage > 80,
-        ["border-zinc-600"]: isCurrentDay,
+        ["bg-violet-500 border-violet-500"]: amountAccomplishedPercentage >= 80,
+        ["border-zinc-200"]: isCurrentDay,
       })}
       style={{ width: DAY_SIZE, height: DAY_SIZE }}
       activeOpacity={0.7}
