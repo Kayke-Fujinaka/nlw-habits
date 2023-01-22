@@ -40,8 +40,10 @@ export function New() {
   async function createNewHabit() {
     try {
       if (!title.trim() || weekDays.length === 0) {
-        Alert.alert("Novo Hábito", "Informe o hábito e escolha a recorrência!");
-        return;
+        return Alert.alert(
+          "Novo Hábito",
+          "Informe o hábito e escolha a recorrência!"
+        );
       }
 
       await api.post("/habits", { title, weekDays });
